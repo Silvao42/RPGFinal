@@ -1,4 +1,4 @@
-﻿using Aula09.Dominio;
+﻿using WebCommerce.Dominio;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using WebCommerce.Dominio.Entidades;
@@ -10,8 +10,8 @@ namespace WebCommerce.Dados.Configuracoes
     {
         public void Configure(EntityTypeBuilder<Classe> builder)
         {
-            builder.ToTable("Classe");
-            builder.HasKey("CodClasse");
+            builder.ToTable("Classe", "RPG");
+            builder.HasKey(c => new { c.CodClasse });
             builder.Property(f => f.CodClasse).HasColumnName("CodClasse");
             builder.Property(f => f.NomeClasse).HasColumnName("NomeClasse")
                 .IsRequired()

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Aula09.Comum
+namespace WebCommerce.Comum
 {
     public class MatematicaUtil
     {

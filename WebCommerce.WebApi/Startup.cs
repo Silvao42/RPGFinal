@@ -1,5 +1,4 @@
 using System;
-using Aula09.Servico;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -8,19 +7,13 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using WebCommerce.Dados;
 using WebCommerce.Dominio.Interfaces;
+using WebCommerce.Servico;
 
-namespace Aula09.WebApi
+namespace WebCommerce.WebApi
 {
-    /// <summary>
-    /// Startup
-    /// </summary>
     public class Startup
     {
 
-        /// <summary>
-        /// Startup
-        /// </summary>
-        /// <param name="configuration"></param>
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -31,8 +24,12 @@ namespace Aula09.WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddTransient<IProdutoServico, ProdutoServico>();
-            services.AddTransient<IProdutoRepositorio, ProdutoRepositorio>();
+            services.AddTransient<IArmaServico, ArmaServico>();
+            services.AddTransient<IArmaRepositorio, ArmaRepositorio>();
+
+            services.AddTransient<IArmaInventarioServico, ArmaInventarioServico>();
+            services.AddTransient<IArmaInventarioRepositorio, ArmaInventarioRepositorio>();
+
             services.AddScoped(typeof(IRepositorioBase<>), typeof(RepositorioBase<>));
 
             services.AddCors();

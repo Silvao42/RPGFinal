@@ -1,4 +1,4 @@
-﻿using Aula09.Dominio;
+﻿using WebCommerce.Dominio;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +10,7 @@ namespace WebCommerce.Dados
 {
     public class ArmaRepositorio : RepositorioBase<Arma>, IArmaRepositorio 
     {
-        public IEnumerable<Arma> ListarAtivos()
+        public IEnumerable<Arma> ListarTodos()
         {
             return Contexto
                 .Arma

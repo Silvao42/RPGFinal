@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace WebCommerce.Dominio.Entidades
 {
     public class ArmaInventario
     {
+        [Key]
         public int CodArma { get; set; }
         public int CodFicha { get; set; }
         public int CodJogador { get; set; }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Aula09.Dominio
+namespace WebCommerce.Dominio
 {
     public class Raca
     {

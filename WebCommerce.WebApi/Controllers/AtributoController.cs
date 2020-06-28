@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Aula09.Comum.NotificationPattern;
-using Aula09.Servico;
+using WebCommerce.Comum.NotificationPattern;
+using WebCommerce.Servico;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using WebCommerce.Dominio.Interfaces;

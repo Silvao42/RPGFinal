@@ -1,5 +1,5 @@
-﻿using Aula09.Comum.NotificationPattern;
-using Aula09.Dominio;
+﻿using WebCommerce.Comum.NotificationPattern;
+using WebCommerce.Dominio;
 using System;
 using System.Collections.Generic;
 using System.Text;

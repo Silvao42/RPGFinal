@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Aula09.Comum.NotificationPattern
+namespace WebCommerce.Comum.NotificationPattern
 {
     public class NotificationResultException
     {

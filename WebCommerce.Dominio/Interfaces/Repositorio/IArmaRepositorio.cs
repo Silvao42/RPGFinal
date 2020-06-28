@@ -1,4 +1,4 @@
-﻿using Aula09.Dominio;
+﻿using WebCommerce.Dominio;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -9,6 +9,5 @@ namespace WebCommerce.Dominio.Interfaces
 {
     public interface IArmaRepositorio : IRepositorioBase<Arma>
     {
-
     }
 }

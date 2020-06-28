@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -6,7 +6,8 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>C:\Users\Silvao\Desktop\SIF-WebCommerce-master\WebCommerce.WebApi\WebCommerce.WebApi.xml</DocumentationFile>
+    <DocumentationFile></DocumentationFile>
+    <OutputPath />
   </PropertyGroup>
 
   <ItemGroup>

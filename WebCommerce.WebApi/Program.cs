@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace Aula09.WebApi
+namespace WebCommerce.WebApi
 {
     public class Program
     {

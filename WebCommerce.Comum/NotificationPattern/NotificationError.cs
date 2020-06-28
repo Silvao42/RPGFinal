@@ -1,4 +1,4 @@
-﻿namespace Aula09.Comum.NotificationPattern
+﻿namespace WebCommerce.Comum.NotificationPattern
 {
     public enum NotificationErrorType
     {

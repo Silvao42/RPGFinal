@@ -1,0 +1,811 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebCommerce.WebApi</name>
+    </assembly>
+    <members>
+        <member name="T:WebCommerce.WebApi.Controllers.ArmaController">
+            <summary>
+            Operações relacionadas ao processo de CRUD dos produtos
+            </summary>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.ArmaController.#ctor(WebCommerce.Dominio.Interfaces.IArmaServico)">
+            <summary>
+            Método Construtor do Controller Produto
+            </summary>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.ArmaController.Todos">
+            <summary>
+            Listar Todos os Produtos
+            </summary>
+            <returns>
+            Retorna uma lista de produtos do tipo "Produto"
+            </returns>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.ArmaController.Ativos">
+            <summary>
+            Lista de Todos os Produtos Ativos
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.ArmaController.Salvar(WebCommerce.Dominio.Entidades.Arma)">
+            <summary>
+            Evento responsável pelo cadastro de Produtos
+            </summary>
+            <param name="entidade">
+                
+            </param>
+            <remarks>
+                {
+                   "idProduto": 1,
+                   "Nome": "Item1",
+                   "PrecoCusto": 10.0
+                }
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="T:WebCommerce.WebApi.Controllers.ArmaduraController">
+            <summary>
+            Operações relacionadas ao processo de CRUD dos produtos
+            </summary>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.ArmaduraController.#ctor(WebCommerce.Dominio.Interfaces.IArmaduraServico)">
+            <summary>
+            Método Construtor do Controller Produto
+            </summary>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.ArmaduraController.Todos">
+            <summary>
+            Listar Todos os Produtos
+            </summary>
+            <returns>
+            Retorna uma lista de produtos do tipo "Produto"
+            </returns>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.ArmaduraController.Ativos">
+            <summary>
+            Lista de Todos os Produtos Ativos
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.ArmaduraController.Salvar(WebCommerce.Dominio.Entidades.Armadura)">
+            <summary>
+            Evento responsável pelo cadastro de Produtos
+            </summary>
+            <param name="entidade">
+                
+            </param>
+            <remarks>
+                {
+                   "idProduto": 1,
+                   "Nome": "Item1",
+                   "PrecoCusto": 10.0
+                }
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="T:WebCommerce.WebApi.Controllers.ArmaduraInventarioController">
+            <summary>
+            Operações relacionadas ao processo de CRUD dos produtos
+            </summary>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.ArmaduraInventarioController.#ctor(WebCommerce.Dominio.Interfaces.IArmaduraInventarioServico)">
+            <summary>
+            Método Construtor do Controller Produto
+            </summary>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.ArmaduraInventarioController.Todos">
+            <summary>
+            Listar Todos os Produtos
+            </summary>
+            <returns>
+            Retorna uma lista de produtos do tipo "Produto"
+            </returns>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.ArmaduraInventarioController.Ativos">
+            <summary>
+            Lista de Todos os Produtos Ativos
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.ArmaduraInventarioController.Salvar(WebCommerce.Dominio.Entidades.ArmaduraInventario)">
+            <summary>
+            Evento responsável pelo cadastro de Produtos
+            </summary>
+            <param name="entidade">
+                
+            </param>
+            <remarks>
+                {
+                   "idProduto": 1,
+                   "Nome": "Item1",
+                   "PrecoCusto": 10.0
+                }
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="T:WebCommerce.WebApi.Controllers.ArmaInventarioController">
+            <summary>
+            Operações relacionadas ao processo de CRUD dos produtos
+            </summary>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.ArmaInventarioController.#ctor(WebCommerce.Dominio.Interfaces.IArmaInventarioServico)">
+            <summary>
+            Método Construtor do Controller Produto
+            </summary>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.ArmaInventarioController.Todos">
+            <summary>
+            Listar Todos os Produtos
+            </summary>
+            <returns>
+            Retorna uma lista de produtos do tipo "Produto"
+            </returns>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.ArmaInventarioController.Ativos">
+            <summary>
+            Lista de Todos os Produtos Ativos
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.ArmaInventarioController.Salvar(WebCommerce.Dominio.Entidades.ArmaInventario)">
+            <summary>
+            Evento responsável pelo cadastro de Produtos
+            </summary>
+            <param name="entidade">
+                
+            </param>
+            <remarks>
+                {
+                   "idProduto": 1,
+                   "Nome": "Item1",
+                   "PrecoCusto": 10.0
+                }
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="T:WebCommerce.WebApi.Controllers.AtributoController">
+            <summary>
+            Operações relacionadas ao processo de CRUD dos produtos
+            </summary>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.AtributoController.#ctor(WebCommerce.Dominio.Interfaces.IAtributoServico)">
+            <summary>
+            Método Construtor do Controller Produto
+            </summary>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.AtributoController.Todos">
+            <summary>
+            Listar Todos os Produtos
+            </summary>
+            <returns>
+            Retorna uma lista de produtos do tipo "Produto"
+            </returns>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.AtributoController.Ativos">
+            <summary>
+            Lista de Todos os Produtos Ativos
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.AtributoController.Salvar(WebCommerce.Dominio.Entidades.Atributo)">
+            <summary>
+            Evento responsável pelo cadastro de Produtos
+            </summary>
+            <param name="entidade">
+                
+            </param>
+            <remarks>
+                {
+                   "idProduto": 1,
+                   "Nome": "Item1",
+                   "PrecoCusto": 10.0
+                }
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="T:WebCommerce.WebApi.Controllers.ClasseController">
+            <summary>
+            Operações relacionadas ao processo de CRUD dos produtos
+            </summary>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.ClasseController.#ctor(WebCommerce.Dominio.Interfaces.IClasseServico)">
+            <summary>
+            Método Construtor do Controller Produto
+            </summary>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.ClasseController.Todos">
+            <summary>
+            Listar Todos os Produtos
+            </summary>
+            <returns>
+            Retorna uma lista de produtos do tipo "Produto"
+            </returns>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.ClasseController.Ativos">
+            <summary>
+            Lista de Todos os Produtos Ativos
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.ClasseController.EhIgual">
+            <summary>
+            Exemplo de equals e getHashCode
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.ClasseController.Salvar(WebCommerce.Dominio.Entidades.Classe)">
+            <summary>
+            Evento responsável pelo cadastro de Produtos
+            </summary>
+            <param name="entidade">
+                
+            </param>
+            <remarks>
+                {
+                   "idProduto": 1,
+                   "Nome": "Item1",
+                   "PrecoCusto": 10.0
+                }
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="T:WebCommerce.WebApi.Controllers.FichaController">
+            <summary>
+            Operações relacionadas ao processo de CRUD dos produtos
+            </summary>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.FichaController.#ctor(WebCommerce.Dominio.Interfaces.IFichaServico)">
+            <summary>
+            Método Construtor do Controller Produto
+            </summary>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.FichaController.Todos">
+            <summary>
+            Listar Todos os Produtos
+            </summary>
+            <returns>
+            Retorna uma lista de produtos do tipo "Produto"
+            </returns>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.FichaController.Ativos">
+            <summary>
+            Lista de Todos os Produtos Ativos
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.FichaController.EhIgual">
+            <summary>
+            Exemplo de equals e getHashCode
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.FichaController.Salvar(WebCommerce.Dominio.Entidades.Ficha)">
+            <summary>
+            Evento responsável pelo cadastro de Produtos
+            </summary>
+            <param name="entidade">
+                
+            </param>
+            <remarks>
+                {
+                   "idProduto": 1,
+                   "Nome": "Item1",
+                   "PrecoCusto": 10.0
+                }
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="T:WebCommerce.WebApi.Controllers.FichaIdiomaController">
+            <summary>
+            Operações relacionadas ao processo de CRUD dos produtos
+            </summary>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.FichaIdiomaController.#ctor(WebCommerce.Dominio.Interfaces.IFichaIdiomaServico)">
+            <summary>
+            Método Construtor do Controller Produto
+            </summary>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.FichaIdiomaController.Todos">
+            <summary>
+            Listar Todos os Produtos
+            </summary>
+            <returns>
+            Retorna uma lista de produtos do tipo "Produto"
+            </returns>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.FichaIdiomaController.Ativos">
+            <summary>
+            Lista de Todos os Produtos Ativos
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.FichaIdiomaController.EhIgual">
+            <summary>
+            Exemplo de equals e getHashCode
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.FichaIdiomaController.Salvar(WebCommerce.Dominio.Entidades.FichaIdioma)">
+            <summary>
+            Evento responsável pelo cadastro de Produtos
+            </summary>
+            <param name="entidade">
+                
+            </param>
+            <remarks>
+                {
+                   "idProduto": 1,
+                   "Nome": "Item1",
+                   "PrecoCusto": 10.0
+                }
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="T:WebCommerce.WebApi.Controllers.IdiomaController">
+            <summary>
+            Operações relacionadas ao processo de CRUD dos produtos
+            </summary>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.IdiomaController.#ctor(WebCommerce.Dominio.Interfaces.IIdiomaServico)">
+            <summary>
+            Método Construtor do Controller Produto
+            </summary>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.IdiomaController.Todos">
+            <summary>
+            Listar Todos os Produtos
+            </summary>
+            <returns>
+            Retorna uma lista de produtos do tipo "Produto"
+            </returns>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.IdiomaController.Ativos">
+            <summary>
+            Lista de Todos os Produtos Ativos
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.IdiomaController.Salvar(WebCommerce.Dominio.Entidades.Idioma)">
+            <summary>
+            Evento responsável pelo cadastro de Produtos
+            </summary>
+            <param name="entidade">
+                
+            </param>
+            <remarks>
+                {
+                   "idProduto": 1,
+                   "Nome": "Item1",
+                   "PrecoCusto": 10.0
+                }
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="T:WebCommerce.WebApi.Controllers.ItemController">
+            <summary>
+            Operações relacionadas ao processo de CRUD dos produtos
+            </summary>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.ItemController.#ctor(WebCommerce.Dominio.Interfaces.IItemServico)">
+            <summary>
+            Método Construtor do Controller Produto
+            </summary>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.ItemController.Todos">
+            <summary>
+            Listar Todos os Produtos
+            </summary>
+            <returns>
+            Retorna uma lista de produtos do tipo "Produto"
+            </returns>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.ItemController.Ativos">
+            <summary>
+            Lista de Todos os Produtos Ativos
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.ItemController.EhIgual">
+            <summary>
+            Exemplo de equals e getHashCode
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.ItemController.Salvar(WebCommerce.Dominio.Entidades.Item)">
+            <summary>
+            Evento responsável pelo cadastro de Produtos
+            </summary>
+            <param name="entidade">
+                
+            </param>
+            <remarks>
+                {
+                   "idProduto": 1,
+                   "Nome": "Item1",
+                   "PrecoCusto": 10.0
+                }
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="T:WebCommerce.WebApi.Controllers.ItemInventarioController">
+            <summary>
+            Operações relacionadas ao processo de CRUD dos produtos
+            </summary>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.ItemInventarioController.#ctor(WebCommerce.Dominio.Interfaces.IItemInventarioServico)">
+            <summary>
+            Método Construtor do Controller Produto
+            </summary>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.ItemInventarioController.Todos">
+            <summary>
+            Listar Todos os Produtos
+            </summary>
+            <returns>
+            Retorna uma lista de produtos do tipo "Produto"
+            </returns>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.ItemInventarioController.Ativos">
+            <summary>
+            Lista de Todos os Produtos Ativos
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.ItemInventarioController.EhIgual">
+            <summary>
+            Exemplo de equals e getHashCode
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.ItemInventarioController.Salvar(WebCommerce.Dominio.Entidades.ItemInventario)">
+            <summary>
+            Evento responsável pelo cadastro de Produtos
+            </summary>
+            <param name="entidade">
+                
+            </param>
+            <remarks>
+                {
+                   "idProduto": 1,
+                   "Nome": "Item1",
+                   "PrecoCusto": 10.0
+                }
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="T:WebCommerce.WebApi.Controllers.JogadorController">
+            <summary>
+            Operações relacionadas ao processo de CRUD dos produtos
+            </summary>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.JogadorController.#ctor(WebCommerce.Dominio.Interfaces.IJogadorServico)">
+            <summary>
+            Método Construtor do Controller Produto
+            </summary>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.JogadorController.Todos">
+            <summary>
+            Listar Todos os Produtos
+            </summary>
+            <returns>
+            Retorna uma lista de produtos do tipo "Produto"
+            </returns>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.JogadorController.Ativos">
+            <summary>
+            Lista de Todos os Produtos Ativos
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.JogadorController.EhIgual">
+            <summary>
+            Exemplo de equals e getHashCode
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.JogadorController.Salvar(WebCommerce.Dominio.Entidades.Jogador)">
+            <summary>
+            Evento responsável pelo cadastro de Produtos
+            </summary>
+            <param name="entidade">
+                
+            </param>
+            <remarks>
+                {
+                   "idProduto": 1,
+                   "Nome": "Item1",
+                   "PrecoCusto": 10.0
+                }
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="T:WebCommerce.WebApi.Controllers.ListaMagiaController">
+            <summary>
+            Operações relacionadas ao processo de CRUD dos produtos
+            </summary>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.ListaMagiaController.#ctor(WebCommerce.Dominio.Interfaces.IListaMagiaServico)">
+            <summary>
+            Método Construtor do Controller Produto
+            </summary>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.ListaMagiaController.Todos">
+            <summary>
+            Listar Todos os Produtos
+            </summary>
+            <returns>
+            Retorna uma lista de produtos do tipo "Produto"
+            </returns>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.ListaMagiaController.Ativos">
+            <summary>
+            Lista de Todos os Produtos Ativos
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.ListaMagiaController.EhIgual">
+            <summary>
+            Exemplo de equals e getHashCode
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.ListaMagiaController.Salvar(WebCommerce.Dominio.Entidades.ListaMagia)">
+            <summary>
+            Evento responsável pelo cadastro de Produtos
+            </summary>
+            <param name="entidade">
+                
+            </param>
+            <remarks>
+                {
+                   "idProduto": 1,
+                   "Nome": "Item1",
+                   "PrecoCusto": 10.0
+                }
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="T:WebCommerce.WebApi.Controllers.MagiaController">
+            <summary>
+            Operações relacionadas ao processo de CRUD dos produtos
+            </summary>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.MagiaController.#ctor(WebCommerce.Dominio.Interfaces.IMagiaServico)">
+            <summary>
+            Método Construtor do Controller Produto
+            </summary>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.MagiaController.Todos">
+            <summary>
+            Listar Todos os Produtos
+            </summary>
+            <returns>
+            Retorna uma lista de produtos do tipo "Produto"
+            </returns>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.MagiaController.Ativos">
+            <summary>
+            Lista de Todos os Produtos Ativos
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.MagiaController.EhIgual">
+            <summary>
+            Exemplo de equals e getHashCode
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.MagiaController.Salvar(WebCommerce.Dominio.Entidades.Magia)">
+            <summary>
+            Evento responsável pelo cadastro de Produtos
+            </summary>
+            <param name="entidade">
+                
+            </param>
+            <remarks>
+                {
+                   "idProduto": 1,
+                   "Nome": "Item1",
+                   "PrecoCusto": 10.0
+                }
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="T:WebCommerce.WebApi.Controllers.MoedaController">
+            <summary>
+            Operações relacionadas ao processo de CRUD dos produtos
+            </summary>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.MoedaController.#ctor(WebCommerce.Dominio.Interfaces.IMoedaServico)">
+            <summary>
+            Método Construtor do Controller Produto
+            </summary>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.MoedaController.Todos">
+            <summary>
+            Listar Todos os Produtos
+            </summary>
+            <returns>
+            Retorna uma lista de produtos do tipo "Produto"
+            </returns>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.MoedaController.Ativos">
+            <summary>
+            Lista de Todos os Produtos Ativos
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.MoedaController.EhIgual">
+            <summary>
+            Exemplo de equals e getHashCode
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.MoedaController.Salvar(WebCommerce.Dominio.Entidades.Moeda)">
+            <summary>
+            Evento responsável pelo cadastro de Produtos
+            </summary>
+            <param name="entidade">
+                
+            </param>
+            <remarks>
+                {
+                   "idProduto": 1,
+                   "Nome": "Item1",
+                   "PrecoCusto": 10.0
+                }
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="T:WebCommerce.WebApi.Controllers.PericiaController">
+            <summary>
+            Operações relacionadas ao processo de CRUD dos produtos
+            </summary>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.PericiaController.#ctor(WebCommerce.Dominio.Interfaces.IPericiaServico)">
+            <summary>
+            Método Construtor do Controller Produto
+            </summary>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.PericiaController.Todos">
+            <summary>
+            Listar Todos os Produtos
+            </summary>
+            <returns>
+            Retorna uma lista de produtos do tipo "Produto"
+            </returns>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.PericiaController.Ativos">
+            <summary>
+            Lista de Todos os Produtos Ativos
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.PericiaController.EhIgual">
+            <summary>
+            Exemplo de equals e getHashCode
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.PericiaController.Salvar(WebCommerce.Dominio.Entidades.Pericia)">
+            <summary>
+            Evento responsável pelo cadastro de Produtos
+            </summary>
+            <param name="entidade">
+                
+            </param>
+            <remarks>
+                {
+                   "idProduto": 1,
+                   "Nome": "Item1",
+                   "PrecoCusto": 10.0
+                }
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="T:WebCommerce.WebApi.Controllers.ProdutoController">
+            <summary>
+            Operações relacionadas ao processo de CRUD dos produtos
+            </summary>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.ProdutoController.#ctor(WebCommerce.Dominio.Interfaces.IProdutoServico)">
+            <summary>
+            Método Construtor do Controller Produto
+            </summary>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.ProdutoController.Todos">
+            <summary>
+            Listar Todos os Produtos
+            </summary>
+            <returns>
+            Retorna uma lista de produtos do tipo "Produto"
+            </returns>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.ProdutoController.Ativos">
+            <summary>
+            Lista de Todos os Produtos Ativos
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.ProdutoController.EhIgual">
+            <summary>
+            Exemplo de equals e getHashCode
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.ProdutoController.Salvar(Aula09.Dominio.Produto)">
+            <summary>
+            Evento responsável pelo cadastro de Produtos
+            </summary>
+            <param name="entidade">
+                
+            </param>
+            <remarks>
+                {
+                   "idProduto": 1,
+                   "Nome": "Item1",
+                   "PrecoCusto": 10.0
+                }
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="T:WebCommerce.WebApi.Controllers.RacaController">
+            <summary>
+            Operações relacionadas ao processo de CRUD dos produtos
+            </summary>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.RacaController.#ctor(WebCommerce.Dominio.Interfaces.IRacaServico)">
+            <summary>
+            Método Construtor do Controller Produto
+            </summary>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.RacaController.Todos">
+            <summary>
+            Listar Todos os Produtos
+            </summary>
+            <returns>
+            Retorna uma lista de produtos do tipo "Produto"
+            </returns>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.RacaController.Ativos">
+            <summary>
+            Lista de Todos os Produtos Ativos
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.RacaController.EhIgual">
+            <summary>
+            Exemplo de equals e getHashCode
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebCommerce.WebApi.Controllers.RacaController.Salvar(Aula09.Dominio.Raca)">
+            <summary>
+            Evento responsável pelo cadastro de Produtos
+            </summary>
+            <param name="entidade">
+                
+            </param>
+            <remarks>
+                {
+                   "idProduto": 1,
+                   "Nome": "Item1",
+                   "PrecoCusto": 10.0
+                }
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="T:Aula09.WebApi.Startup">
+            <summary>
+            Startup
+            </summary>
+        </member>
+        <member name="M:Aula09.WebApi.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Startup
+            </summary>
+            <param name="configuration"></param>
+        </member>
+    </members>
+</doc>

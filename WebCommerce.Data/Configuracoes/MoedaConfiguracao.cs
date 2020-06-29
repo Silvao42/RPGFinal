@@ -24,12 +24,7 @@ namespace WebCommerce.Dados.Configuracoes
             builder
                 .HasOne(d => d.Ficha)
                 .WithMany()
-                .HasForeignKey(f => f.CodFicha);
-
-            builder
-                .HasOne(d => d.Jogador)
-                .WithMany()
-                .HasForeignKey(f => f.CodJogador);
+                .HasForeignKey(f => new { f.CodFicha, f.CodJogador });
         }
     }
 }

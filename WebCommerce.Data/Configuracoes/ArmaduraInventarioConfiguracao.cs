@@ -17,19 +17,14 @@ namespace WebCommerce.Dados.Configuracoes
             builder.Property(f => f.CodJogador).HasColumnName("CodJogador");
 
             builder
-                .HasOne(d => d.Ficha)
-                .WithMany()
-                .HasForeignKey(f => f.CodFicha);
-
-            builder
-                .HasOne(d => d.Jogador)
-                .WithMany()
-                .HasForeignKey(f => f.CodJogador);
-
-            builder
                 .HasOne(d => d.Armadura)
                 .WithMany()
                 .HasForeignKey(f => f.CodArmadura);
+
+            builder
+                .HasOne(d => d.Ficha)
+                .WithMany()
+                .HasForeignKey(f => new { f.CodFicha, f.CodJogador });
 
         }
     }

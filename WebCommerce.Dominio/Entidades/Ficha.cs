@@ -2,11 +2,13 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel.DataAnnotations;
 
 namespace WebCommerce.Dominio.Entidades
 {
     public class Ficha
     {
+        [Key]
         public int CodFicha { get; set; }
         public int CodJogador { get; set; }
         public string NomePersonagem { get; set; }

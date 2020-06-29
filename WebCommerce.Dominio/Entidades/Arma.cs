@@ -3,7 +3,7 @@
 namespace WebCommerce.Dominio.Entidades
 {
     public class Arma
-    {
+    {   
         [Key]
         public int CodArma { get; set; }
         public string NomeArma { get; set; }

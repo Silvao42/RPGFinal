@@ -11,26 +11,21 @@ namespace WebCommerce.Dados.Configuracoes
         public void Configure(EntityTypeBuilder<ItemInventario> builder)
         {
             builder.ToTable("ItemInventario", "RPG");
-            builder.HasKey(c => new { c.CodItem, c.Ficha, c.CodJogador });
+            builder.HasKey(c => new { c.CodItem, c.CodFicha, c.CodJogador });
             //builder.HasKey("CodItem", "CodFicha", "CodJogador");
-            //builder.Property(f => f.CodItem).HasColumnName("CodItem");
-            //builder.Property(f => f.CodFicha).HasColumnName("CodFicha");
-            //builder.Property(f => f.CodJogador).HasColumnName("CodJogador");
-
-            builder
-                .HasOne(d => d.Ficha)
-                .WithMany()
-                .HasForeignKey(f => f.CodFicha);
-
-            builder
-                .HasOne(d => d.Jogador)
-                .WithMany()
-                .HasForeignKey(f => f.CodJogador);
+            builder.Property(f => f.CodItem).HasColumnName("CodItem");
+            builder.Property(f => f.CodFicha).HasColumnName("CodFicha");
+            builder.Property(f => f.CodJogador).HasColumnName("CodJogador");
 
             builder
                 .HasOne(d => d.Item)
                 .WithMany()
                 .HasForeignKey(f => f.CodItem);
+
+            builder
+                .HasOne(d => d.Ficha)
+                .WithMany()
+                .HasForeignKey(f => new { f.CodFicha, f.CodJogador });
 
         }
     }

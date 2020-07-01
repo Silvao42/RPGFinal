@@ -55,9 +55,9 @@ namespace WebCommerce.WebApi.Controllers
         }
 
         [HttpDelete("excluir")]
-        public NotificationResult Excluir(int CodFicha, int CodJogador, int CodItem)
+        public NotificationResult Excluir(ItemInventario entidade)
         {
-            return _itemInventarioServico.Excluir( CodFicha, CodJogador, CodItem);
+            return _itemInventarioServico.Excluir(entidade);
         }
 
         [HttpPut("Atualizar")]

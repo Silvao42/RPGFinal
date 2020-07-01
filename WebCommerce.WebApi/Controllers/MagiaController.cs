@@ -51,9 +51,9 @@ namespace WebCommerce.WebApi.Controllers
         }
 
         [HttpDelete("excluir")]
-        public NotificationResult Excluir(int CodMagia)
+        public NotificationResult Excluir(Magia entidade)
         {
-            return _magiaServico.Excluir(CodMagia);
+            return _magiaServico.Excluir(entidade);
         }
 
         [HttpPut("Atualizar")]

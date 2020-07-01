@@ -94,9 +94,9 @@ namespace WebCommerce.WebApi.Controllers
         }
 
         [HttpDelete("excluir")]
-        public NotificationResult Excluir(int CodArmadura)
+        public NotificationResult Excluir(Armadura entidade)
         {
-            return _armaduraServico.Excluir(CodArmadura);
+            return _armaduraServico.Excluir(entidade);
         }
 
         [HttpPut("Atualizar")]

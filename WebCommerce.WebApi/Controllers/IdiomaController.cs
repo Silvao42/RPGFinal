@@ -96,9 +96,9 @@ namespace WebCommerce.WebApi.Controllers
         }
 
         [HttpDelete("excluir")]
-        public NotificationResult Excluir(int CodIdioma)
+        public NotificationResult Excluir(Idioma entidade)
         {
-            return _idiomaServico.Excluir(CodIdioma);
+            return _idiomaServico.Excluir(entidade);
         }
 
         [HttpPut("Atualizar")]

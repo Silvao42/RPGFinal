@@ -18,9 +18,35 @@ namespace WebCommerce.Servico
             _listaMagiaRepositorio = listaMagiaRepositorio;
         }
 
-        public NotificationResult Excluir(int CodMagia, int CodFicha, int CodJogador)
+        public NotificationResult Excluir(ListaMagia entidade)
         {
-            throw new NotImplementedException();
+            var NotificationResult = new NotificationResult();
+
+            try
+            {
+                if (entidade.CodFicha != 0 && entidade.CodJogador != 0 && entidade.CodMagia != 0)
+                {
+
+                    if (NotificationResult.IsValid)
+                    {
+                        _listaMagiaRepositorio.Remover(entidade);
+                        NotificationResult.Add("Cadastro excluido com Sucesso!");
+
+                        return NotificationResult;
+                    }
+
+                    else
+                        return NotificationResult.Add(new NotificationError("O codigo informado não existe!", NotificationErrorType.USER));
+                }
+
+                else
+                    return NotificationResult.Add(new NotificationError("O codigo informado não existe!", NotificationErrorType.USER));
+            }
+
+            catch (Exception ex)
+            {
+                return NotificationResult.Add(new NotificationError(ex.Message));
+            }
         }
 
         public IEnumerable<ListaMagia> ListarAtivos()

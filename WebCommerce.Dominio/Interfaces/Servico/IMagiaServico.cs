@@ -16,7 +16,7 @@ namespace WebCommerce.Dominio.Interfaces
         Task<List<Magia>> ListarTodos();
 
         NotificationResult Salvar(Magia entidade);
-        NotificationResult Excluir(int CodMagia);
+        NotificationResult Excluir(Magia entidade);
         NotificationResult Atualizar(Magia entidade);
     }
 }

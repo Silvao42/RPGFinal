@@ -18,9 +18,35 @@ namespace WebCommerce.Servico
             _moedaRepositorio = moedaRepositorio;
         }
 
-        public NotificationResult Excluir(int CodMoeda)
+        public NotificationResult Excluir(Moeda entidade)
         {
-            throw new NotImplementedException();
+            var NotificationResult = new NotificationResult();
+
+            try
+            {
+                if (entidade.CodMoeda != 0)
+                {
+
+                    if (NotificationResult.IsValid)
+                    {
+                        _moedaRepositorio.Remover(entidade);
+                        NotificationResult.Add("Cadastro excluido com Sucesso!");
+
+                        return NotificationResult;
+                    }
+
+                    else
+                        return NotificationResult.Add(new NotificationError("O codigo informado não existe!", NotificationErrorType.USER));
+                }
+
+                else
+                    return NotificationResult.Add(new NotificationError("O codigo informado não existe!", NotificationErrorType.USER));
+            }
+
+            catch (Exception ex)
+            {
+                return NotificationResult.Add(new NotificationError(ex.Message));
+            }
         }
 
         public IEnumerable<Moeda> ListarAtivos()

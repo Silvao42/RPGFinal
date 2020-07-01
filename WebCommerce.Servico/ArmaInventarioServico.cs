@@ -18,9 +18,35 @@ namespace WebCommerce.Servico
             _armaInventarioRepositorio = armaInventarioRepositorio;
         }
 
-        public NotificationResult Excluir(int CodFicha, int CodJogador, int CodArma)
+        public NotificationResult Excluir(ArmaInventario entidade)
         {
-            throw new NotImplementedException();
+            var NotificationResult = new NotificationResult();
+
+            try
+            {
+                if (entidade.CodArma != 0 && entidade.CodJogador != 0 && entidade.CodFicha != 0)
+                {
+
+                    if (NotificationResult.IsValid)
+                    {
+                        _armaInventarioRepositorio.Remover(entidade);
+                        NotificationResult.Add("Cadastro excluido com Sucesso!");
+
+                        return NotificationResult;
+                    }
+
+                    else
+                        return NotificationResult.Add(new NotificationError("O codigo informado não existe!", NotificationErrorType.USER));
+                }
+
+                else
+                    return NotificationResult.Add(new NotificationError("O codigo informado não existe!", NotificationErrorType.USER));
+            }
+
+            catch (Exception ex)
+            {
+                return NotificationResult.Add(new NotificationError(ex.Message));
+            }
         }
 
         public IEnumerable<ArmaInventario> ListarAtivos()

@@ -16,7 +16,7 @@ namespace WebCommerce.Dominio.Interfaces
         Task<List<ArmaInventario>> ListarTodos();
 
         NotificationResult Salvar(ArmaInventario entidade);
-        NotificationResult Excluir(int CodFicha, int CodJogador, int CodArma);
+        NotificationResult Excluir(ArmaInventario entidade);
         NotificationResult Atualizar(ArmaInventario entidade);
     }
 }

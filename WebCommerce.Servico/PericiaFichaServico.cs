@@ -18,9 +18,35 @@ namespace WebCommerce.Servico
             _periciaFichaRepositorio = periciaFichaRepositorio;
         }
 
-        public NotificationResult Excluir(int CodJogador, int CodFicha, int CodPericia)
+        public NotificationResult Excluir(PericiaFicha entidade)
         {
-            throw new NotImplementedException();
+            var NotificationResult = new NotificationResult();
+
+            try
+            {
+                if (entidade.CodFicha != 0 && entidade.CodJogador != 0 && entidade.CodPericia != 0)
+                {
+
+                    if (NotificationResult.IsValid)
+                    {
+                        _periciaFichaRepositorio.Remover(entidade);
+                        NotificationResult.Add("Cadastro excluido com Sucesso!");
+
+                        return NotificationResult;
+                    }
+
+                    else
+                        return NotificationResult.Add(new NotificationError("O codigo informado não existe!", NotificationErrorType.USER));
+                }
+
+                else
+                    return NotificationResult.Add(new NotificationError("O codigo informado não existe!", NotificationErrorType.USER));
+            }
+
+            catch (Exception ex)
+            {
+                return NotificationResult.Add(new NotificationError(ex.Message));
+            }
         }
 
         public IEnumerable<PericiaFicha> ListarAtivos()

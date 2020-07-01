@@ -16,7 +16,7 @@ namespace WebCommerce.Dominio.Interfaces
         Task<List<Moeda>> ListarTodos();
 
         NotificationResult Salvar(Moeda entidade);
-        NotificationResult Excluir(int CodMoeda);
+        NotificationResult Excluir(Moeda entidade);
         NotificationResult Atualizar(Moeda entidade);
     }
 }

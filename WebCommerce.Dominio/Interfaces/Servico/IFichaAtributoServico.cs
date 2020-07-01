@@ -16,7 +16,7 @@ namespace WebCommerce.Dominio.Interfaces
         Task<List<FichaAtributo>> ListarTodos();
 
         NotificationResult Salvar(FichaAtributo entidade);
-        NotificationResult Excluir(int CodFicha, int CodJogador, int CodAtributo);
+        NotificationResult Excluir(FichaAtributo entidade);
         NotificationResult Atualizar(FichaAtributo entidade);
     }
 }

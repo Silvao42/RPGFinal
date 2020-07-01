@@ -16,7 +16,7 @@ namespace WebCommerce.Dominio.Interfaces
         Task<List<MoedaInventario>> ListarTodos();
 
         NotificationResult Salvar(MoedaInventario entidade);
-        NotificationResult Excluir(int CodFicha, int CodJogador, int CodMoeda);
+        NotificationResult Excluir(MoedaInventario entidade);
         NotificationResult Atualizar(MoedaInventario entidade);
     }
 }

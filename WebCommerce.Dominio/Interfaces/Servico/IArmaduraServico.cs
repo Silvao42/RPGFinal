@@ -16,7 +16,7 @@ namespace WebCommerce.Dominio.Interfaces
         Task<List<Armadura>> ListarTodos();
 
         NotificationResult Salvar(Armadura entidade);
-        NotificationResult Excluir(int CodArmadura);
+        NotificationResult Excluir(Armadura entidade);
         NotificationResult Atualizar(Armadura entidade);
     }
 }

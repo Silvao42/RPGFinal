@@ -17,9 +17,35 @@ namespace WebCommerce.Servico
             _racaRepositorio = racaRepositorio;
         }
 
-        public NotificationResult Excluir(int CodRaca)
+        public NotificationResult Excluir(Raca entidade)
         {
-            throw new NotImplementedException();
+            var NotificationResult = new NotificationResult();
+
+            try
+            {
+                if (entidade.CodRaca != 0)
+                {
+
+                    if (NotificationResult.IsValid)
+                    {
+                        _racaRepositorio.Remover(entidade);
+                        NotificationResult.Add("Cadastro excluido com Sucesso!");
+
+                        return NotificationResult;
+                    }
+
+                    else
+                        return NotificationResult.Add(new NotificationError("O codigo informado não existe!", NotificationErrorType.USER));
+                }
+
+                else
+                    return NotificationResult.Add(new NotificationError("O codigo informado não existe!", NotificationErrorType.USER));
+            }
+
+            catch (Exception ex)
+            {
+                return NotificationResult.Add(new NotificationError(ex.Message));
+            }
         }
 
         public IEnumerable<Raca> ListarAtivos()

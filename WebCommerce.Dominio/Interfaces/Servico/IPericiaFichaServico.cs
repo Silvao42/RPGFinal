@@ -16,7 +16,7 @@ namespace WebCommerce.Dominio.Interfaces
         Task<List<PericiaFicha>> ListarTodos();
 
         NotificationResult Salvar(PericiaFicha entidade);
-        NotificationResult Excluir(int CodJogador, int CodFicha, int CodPericia);
+        NotificationResult Excluir(PericiaFicha entidade);
         NotificationResult Atualizar(PericiaFicha entidade);
     }
 }

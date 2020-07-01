@@ -16,7 +16,7 @@ namespace WebCommerce.Dominio.Interfaces
         Task<List<Idioma>> ListarTodos();
 
         NotificationResult Salvar(Idioma entidade);
-        NotificationResult Excluir(int CodIdioma);
+        NotificationResult Excluir(Idioma entidade);
         NotificationResult Atualizar(Idioma entidade);
     }
 }

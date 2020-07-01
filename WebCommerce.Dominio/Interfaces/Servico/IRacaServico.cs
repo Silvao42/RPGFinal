@@ -16,7 +16,7 @@ namespace WebCommerce.Dominio.Interfaces
         Task<List<Raca>> ListarTodos();
 
         NotificationResult Salvar(Raca entidade);
-        NotificationResult Excluir(int CodRaca);
+        NotificationResult Excluir(Raca entidade);
         NotificationResult Atualizar(Raca entidade);
     }
 }

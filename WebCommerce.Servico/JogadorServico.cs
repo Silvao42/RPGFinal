@@ -18,9 +18,35 @@ namespace WebCommerce.Servico
             _jogadorRepositorio = jogadorRepositorio;
         }
 
-        public NotificationResult Excluir(int CodJogador)
+        public NotificationResult Excluir(Jogador entidade)
         {
-            throw new NotImplementedException();
+            var NotificationResult = new NotificationResult();
+
+            try
+            {
+                if (entidade.CodJogador != 0)
+                {
+
+                    if (NotificationResult.IsValid)
+                    {
+                        _jogadorRepositorio.Remover(entidade);
+                        NotificationResult.Add("Cadastro excluido com Sucesso!");
+
+                        return NotificationResult;
+                    }
+
+                    else
+                        return NotificationResult.Add(new NotificationError("O codigo informado não existe!", NotificationErrorType.USER));
+                }
+
+                else
+                    return NotificationResult.Add(new NotificationError("O codigo informado não existe!", NotificationErrorType.USER));
+            }
+
+            catch (Exception ex)
+            {
+                return NotificationResult.Add(new NotificationError(ex.Message));
+            }
         }
 
         public IEnumerable<Jogador> ListarAtivos()

@@ -10,12 +10,13 @@ namespace WebCommerce.Dominio.Interfaces
 {
     public interface IMoedaServico
     {
-        Moeda ListarUm(int CodFicha, int CodJogador);
+        Moeda ListarUm(int CodMoeda);
 
         IEnumerable<Moeda> ListarAtivos();
         Task<List<Moeda>> ListarTodos();
 
         NotificationResult Salvar(Moeda entidade);
-        NotificationResult Excluir(int CodFicha, int CodJogador);
+        NotificationResult Excluir(int CodMoeda);
+        NotificationResult Atualizar(Moeda entidade);
     }
 }

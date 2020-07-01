@@ -60,5 +60,11 @@ namespace WebCommerce.WebApi.Controllers
             return _racaServico.Excluir(CodRaca);
         }
 
+        [HttpPut("Atualizar")]
+        public NotificationResult Atualizar(Raca entidade)
+        {
+            return _racaServico.Atualizar(entidade);
+        }
+
     }
 }

@@ -20,14 +20,14 @@ namespace WebCommerce.WebApi.Controllers
     [Route("[controller]")]
     public class ArmaInventarioController : ControllerBase
     {
-        private readonly IArmaInventarioServico _armaServico;
+        private readonly IArmaInventarioServico _armaInventarioServico;
 
         /// <summary>
         /// Método Construtor do Controller Produto
         /// </summary>
-        public ArmaInventarioController(IArmaInventarioServico armaServico)
+        public ArmaInventarioController(IArmaInventarioServico armaInventarioServico)
         {
-            _armaServico = armaServico;
+            _armaInventarioServico = armaInventarioServico;
         }
 
         /// <summary>
@@ -38,7 +38,7 @@ namespace WebCommerce.WebApi.Controllers
         /// </returns>
         [HttpGet("todos")]
         public Task<List<ArmaInventario>> Todos() {
-             return _armaServico.ListarTodos();
+             return _armaInventarioServico.ListarTodos();
         }
 
         /// <summary>
@@ -46,18 +46,24 @@ namespace WebCommerce.WebApi.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet("ativos")]
-        public IEnumerable<ArmaInventario> Ativos() => _armaServico.ListarAtivos();
+        public IEnumerable<ArmaInventario> Ativos() => _armaInventarioServico.ListarAtivos();
 
         [HttpPost("salvar")]
         public NotificationResult Salvar(ArmaInventario entidade)
         {
-            return _armaServico.Salvar(entidade);
+            return _armaInventarioServico.Salvar(entidade);
         }
 
         [HttpDelete("excluir")]
         public NotificationResult Excluir(int CodFicha, int CodJogador, int CodArma)
         {
-            return _armaServico.Excluir( CodFicha, CodJogador, CodArma);
+            return _armaInventarioServico.Excluir( CodFicha, CodJogador, CodArma);
+        }
+
+        [HttpPut("Atualizar")]
+        public NotificationResult Atualizar(ArmaInventario entidade)
+        {
+            return _armaInventarioServico.Atualizar(entidade);
         }
 
     }

@@ -60,5 +60,11 @@ namespace WebCommerce.WebApi.Controllers
             return _itemServico.Excluir(CodItem);
         }
 
+        [HttpPut("Atualizar")]
+        public NotificationResult Atualizar(Item entidade)
+        {
+            return _itemServico.Atualizar(entidade);
+        }
+
     }
 }

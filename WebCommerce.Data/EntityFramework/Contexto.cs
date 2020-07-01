@@ -17,6 +17,7 @@ namespace WebCommerce.Dados
         public DbSet<Atributo> Atributo { get; set; }
         public DbSet<Classe> Classe { get; set; }
         public DbSet<Ficha> Ficha { get; set; }
+        public DbSet<FichaAtributo> FichaAtributo { get; set; }
         public DbSet<FichaIdioma> FichaIdioma { get; set; }
         public DbSet<Idioma> Idioma { get; set; }
         public DbSet<Item> Item { get; set; }
@@ -25,7 +26,9 @@ namespace WebCommerce.Dados
         public DbSet<ListaMagia> ListaMagia { get; set; }
         public DbSet<Magia> Magia { get; set; }
         public DbSet<Moeda> Moeda { get; set; }
+        public DbSet<MoedaInventario> MoedaInventario { get; set; }
         public DbSet<Pericia> Pericia { get; set; }
+        public DbSet<PericiaFicha> PericiaFicha { get; set; }
         public DbSet<Raca> Raca { get; set; }
         //public DbSet<Departamento> Departamento { get; set; }
         //1. FIM

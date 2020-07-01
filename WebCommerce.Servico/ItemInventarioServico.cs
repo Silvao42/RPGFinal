@@ -42,5 +42,35 @@ namespace WebCommerce.Servico
         {
             throw new NotImplementedException();
         }
+        public NotificationResult Atualizar(ItemInventario entidade)
+        {
+            var NotificationResult = new NotificationResult();
+            try
+            {
+                if (entidade.CodFicha != 0 && entidade.CodJogador != 0 && entidade.CodItem != 0)
+
+                    entidade.CodFicha = entidade.CodFicha;
+                    entidade.CodJogador = entidade.CodJogador;
+                    entidade.CodItem = entidade.CodItem;
+
+                if (NotificationResult.IsValid)
+                {
+                    _itemInventarioRepositorio.Atualizar(entidade);
+                    NotificationResult.Add("Cadastro Alterado com Sucesso!");
+
+                    return NotificationResult;
+                }
+
+                else
+                {
+                    return NotificationResult.Add(new NotificationError("O codigo informado não existe!", NotificationErrorType.USER));
+                }
+            }
+            catch (Exception)
+            {
+                return NotificationResult.Add(new NotificationError("O codigo informado não existe!", NotificationErrorType.USER));
+            }
+
+        }
     }
 }

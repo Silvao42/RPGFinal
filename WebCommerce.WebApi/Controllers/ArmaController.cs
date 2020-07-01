@@ -46,9 +46,15 @@ namespace WebCommerce.WebApi.Controllers
         }
 
         [HttpDelete("excluir")]
-        public NotificationResult Excluir(int CodArma)
+        public NotificationResult Excluir(Arma CodArma)
         {
             return _armaServico.Excluir(CodArma);
+        }
+
+        [HttpPut("Atualizar")]
+        public NotificationResult Atualizar(Arma entidade)
+        {
+            return _armaServico.Atualizar(entidade);
         }
 
     }

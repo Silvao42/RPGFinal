@@ -60,5 +60,11 @@ namespace WebCommerce.WebApi.Controllers
             return _listaMagiaServico.Excluir( CodMagia, CodFicha, CodJogador);
         }
 
+        [HttpPut("Atualizar")]
+        public NotificationResult Atualizar(ListaMagia entidade)
+        {
+            return _listaMagiaServico.Atualizar(entidade);
+        }
+
     }
 }

@@ -14,5 +14,7 @@ namespace WebCommerce.Dominio.Interfaces
         void Remover(T entidade, bool saveChanges = true);
         void Atualizar(T entidade, bool saveChanges = true);
         void SaveChanges();
+
+
     }
 }

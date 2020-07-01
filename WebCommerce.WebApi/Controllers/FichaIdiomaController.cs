@@ -61,5 +61,11 @@ namespace WebCommerce.WebApi.Controllers
             return _fichaIdiomaServico.Excluir( CodIdioma, CodJogador, CodFicha);
         }
 
+        [HttpPut("Atualizar")]
+        public NotificationResult Atualizar(FichaIdioma entidade)
+        {
+            return _fichaIdiomaServico.Atualizar(entidade);
+        }
+
     }
 }

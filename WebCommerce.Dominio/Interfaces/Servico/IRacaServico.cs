@@ -17,5 +17,6 @@ namespace WebCommerce.Dominio.Interfaces
 
         NotificationResult Salvar(Raca entidade);
         NotificationResult Excluir(int CodRaca);
+        NotificationResult Atualizar(Raca entidade);
     }
 }

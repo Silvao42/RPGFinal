@@ -18,9 +18,35 @@ namespace WebCommerce.Servico
             _armaRepositorio = armaRepositorio;
         }
 
-        public NotificationResult Excluir(int CodArma)
+        public NotificationResult Excluir(Arma entidade)
         {
-            throw new NotImplementedException();
+            var NotificationResult = new NotificationResult();
+
+            try
+            {
+                if (entidade.CodArma != 0)
+                {
+
+                    if (NotificationResult.IsValid)
+                    {
+                        _armaRepositorio.Remover(entidade);
+                        NotificationResult.Add("Cadastro excluido com Sucesso!");
+
+                        return NotificationResult;
+                    }
+
+                    else
+                        return NotificationResult.Add(new NotificationError("O codigo informado não existe!", NotificationErrorType.USER));
+                }
+
+                else
+                    return NotificationResult.Add(new NotificationError("O codigo informado não existe!", NotificationErrorType.USER));
+            }
+
+            catch (Exception ex)
+            {
+                return NotificationResult.Add(new NotificationError(ex.Message));
+            }
         }
 
         public IEnumerable<Arma> ListarAtivos()
@@ -40,7 +66,37 @@ namespace WebCommerce.Servico
 
         public NotificationResult Salvar(Arma entidade)
         {
-            throw new NotImplementedException();
+             throw new NotImplementedException();
         }
+
+        public NotificationResult Atualizar(Arma entidade)
+        {
+            var NotificationResult = new NotificationResult();
+            try
+            {
+                if (entidade.CodArma != 0)
+
+                entidade.CodArma = entidade.CodArma;
+
+                if (NotificationResult.IsValid)
+                {
+                    _armaRepositorio.Atualizar(entidade);
+                    NotificationResult.Add("Cadastro Alterado com Sucesso!");
+
+                    return NotificationResult;
+                }
+
+                else
+                {
+                    return NotificationResult.Add(new NotificationError("O codigo informado não existe!", NotificationErrorType.USER));
+                }
+            }
+            catch (Exception)
+            {
+                return NotificationResult.Add(new NotificationError("O codigo informado não existe!", NotificationErrorType.USER));
+            }
+
+        }
+
     }
 }

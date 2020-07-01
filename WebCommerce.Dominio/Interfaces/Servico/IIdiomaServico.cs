@@ -17,5 +17,6 @@ namespace WebCommerce.Dominio.Interfaces
 
         NotificationResult Salvar(Idioma entidade);
         NotificationResult Excluir(int CodIdioma);
+        NotificationResult Atualizar(Idioma entidade);
     }
 }

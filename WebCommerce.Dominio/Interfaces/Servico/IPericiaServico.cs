@@ -10,12 +10,13 @@ namespace WebCommerce.Dominio.Interfaces
 {
     public interface IPericiaServico
     {
-        Pericia ListarUm(int CodJogador, int CodFicha);
+        Pericia ListarUm(int CodPericia);
 
         IEnumerable<Pericia> ListarAtivos();
         Task<List<Pericia>> ListarTodos();
 
         NotificationResult Salvar(Pericia entidade);
-        NotificationResult Excluir(int CodJogador, int CodFicha);
+        NotificationResult Excluir(int CodPericia);
+        NotificationResult Atualizar(Pericia entidade);
     }
 }

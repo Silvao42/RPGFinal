@@ -18,7 +18,7 @@ namespace WebCommerce.Servico
             _atributoServico = atributoServico;
         }
 
-        public NotificationResult Excluir(int CodFicha, int CodJogador)
+        public NotificationResult Excluir(int CodAtributo)
         {
             throw new NotImplementedException();
         }
@@ -33,14 +33,42 @@ namespace WebCommerce.Servico
             throw new NotImplementedException();
         }
 
-        public Atributo ListarUm(int CodFicha, int CodJogador)
+        public Atributo ListarUm(int CodAtributo)
         {
-            return _atributoServico.ListarUm(CodFicha, CodJogador);
+            return _atributoServico.ListarUm(CodAtributo);
         }
 
         public NotificationResult Salvar(Atributo entidade)
         {
             throw new NotImplementedException();
+        }
+        public NotificationResult Atualizar(Atributo entidade)
+        {
+            var NotificationResult = new NotificationResult();
+            try
+            {
+                if (entidade.CodAtributo != 0)
+
+                    entidade.CodAtributo = entidade.CodAtributo;
+
+                if (NotificationResult.IsValid)
+                {
+                    _atributoServico.Atualizar(entidade);
+                    NotificationResult.Add("Cadastro Alterado com Sucesso!");
+
+                    return NotificationResult;
+                }
+
+                else
+                {
+                    return NotificationResult.Add(new NotificationError("O codigo informado não existe!", NotificationErrorType.USER));
+                }
+            }
+            catch (Exception)
+            {
+                return NotificationResult.Add(new NotificationError("O codigo informado não existe!", NotificationErrorType.USER));
+            }
+
         }
     }
 }

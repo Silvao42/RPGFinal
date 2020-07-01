@@ -53,12 +53,10 @@ namespace WebCommerce.Dados
                 SaveChanges();
         }
 
-        public void Atualizar(T entidade, bool saveChanges = true)
+        public void Update(T entidade)
         {
             Entidade.Update(entidade);
-            
-            if (saveChanges)
-                SaveChanges();
+            Contexto.SaveChanges();
         }
 
         public void SaveChanges()
@@ -66,5 +64,10 @@ namespace WebCommerce.Dados
             Contexto.SaveChanges();
         }
 
+        public void Atualizar(T entidade, bool saveChanges = true)
+        {
+            Entidade.Update(entidade);
+            Contexto.SaveChanges();
+        }
     }
 }

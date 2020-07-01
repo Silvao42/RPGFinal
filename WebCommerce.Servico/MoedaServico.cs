@@ -18,7 +18,7 @@ namespace WebCommerce.Servico
             _moedaRepositorio = moedaRepositorio;
         }
 
-        public NotificationResult Excluir(int CodFicha, int CodJogador)
+        public NotificationResult Excluir(int CodMoeda)
         {
             throw new NotImplementedException();
         }
@@ -33,14 +33,42 @@ namespace WebCommerce.Servico
             throw new NotImplementedException();
         }
 
-        public Moeda ListarUm(int CodFicha, int CodJogador)
+        public Moeda ListarUm(int CodMoeda)
         {
-            return _moedaRepositorio.ListarUm( CodFicha, CodJogador);
+            return _moedaRepositorio.ListarUm( CodMoeda);
         }
 
         public NotificationResult Salvar(Moeda entidade)
         {
             throw new NotImplementedException();
+        }
+        public NotificationResult Atualizar(Moeda entidade)
+        {
+            var NotificationResult = new NotificationResult();
+            try
+            {
+                if (entidade.CodMoeda != 0)
+
+                    entidade.CodMoeda = entidade.CodMoeda;
+
+                if (NotificationResult.IsValid)
+                {
+                    _moedaRepositorio.Atualizar(entidade);
+                    NotificationResult.Add("Cadastro Alterado com Sucesso!");
+
+                    return NotificationResult;
+                }
+
+                else
+                {
+                    return NotificationResult.Add(new NotificationError("O codigo informado não existe!", NotificationErrorType.USER));
+                }
+            }
+            catch (Exception)
+            {
+                return NotificationResult.Add(new NotificationError("O codigo informado não existe!", NotificationErrorType.USER));
+            }
+
         }
     }
 }

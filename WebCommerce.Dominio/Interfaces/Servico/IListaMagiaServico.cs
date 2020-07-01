@@ -17,5 +17,6 @@ namespace WebCommerce.Dominio.Interfaces
 
         NotificationResult Salvar(ListaMagia entidade);
         NotificationResult Excluir(int CodMagia, int CodFicha, int CodJogador);
+        NotificationResult Atualizar(ListaMagia entidade);
     }
 }

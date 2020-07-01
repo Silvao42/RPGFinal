@@ -42,5 +42,33 @@ namespace WebCommerce.Servico
         {
             throw new NotImplementedException();
         }
+        public NotificationResult Atualizar(Idioma entidade)
+        {
+            var NotificationResult = new NotificationResult();
+            try
+            {
+                if (entidade.CodIdioma != 0)
+
+                    entidade.CodIdioma = entidade.CodIdioma;
+
+                if (NotificationResult.IsValid)
+                {
+                    _idiomaRepositorio.Atualizar(entidade);
+                    NotificationResult.Add("Cadastro Alterado com Sucesso!");
+
+                    return NotificationResult;
+                }
+
+                else
+                {
+                    return NotificationResult.Add(new NotificationError("O codigo informado não existe!", NotificationErrorType.USER));
+                }
+            }
+            catch (Exception)
+            {
+                return NotificationResult.Add(new NotificationError("O codigo informado não existe!", NotificationErrorType.USER));
+            }
+
+        }
     }
 }

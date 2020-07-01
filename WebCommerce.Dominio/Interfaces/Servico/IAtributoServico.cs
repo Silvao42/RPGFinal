@@ -10,12 +10,13 @@ namespace WebCommerce.Dominio.Interfaces
 {
     public interface IAtributoServico
     {
-        Atributo ListarUm(int CodFicha, int CodJogador);
+        Atributo ListarUm(int CodAtributo);
 
         IEnumerable<Atributo> ListarAtivos();
         Task<List<Atributo>> ListarTodos();
 
         NotificationResult Salvar(Atributo entidade);
-        NotificationResult Excluir(int CodFicha, int CodJogador);
+        NotificationResult Excluir(int CodAtributo);
+        NotificationResult Atualizar(Atributo entidade);
     }
 }

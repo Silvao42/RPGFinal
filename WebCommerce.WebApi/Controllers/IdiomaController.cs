@@ -101,5 +101,10 @@ namespace WebCommerce.WebApi.Controllers
             return _idiomaServico.Excluir(CodIdioma);
         }
 
+        [HttpPut("Atualizar")]
+        public NotificationResult Atualizar(Idioma entidade)
+        {
+            return _idiomaServico.Atualizar(entidade);
+        }
     }
 }

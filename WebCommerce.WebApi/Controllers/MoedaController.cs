@@ -55,9 +55,15 @@ namespace WebCommerce.WebApi.Controllers
         }
 
         [HttpDelete("excluir")]
-        public NotificationResult Excluir(int CodJogador, int CodFicha)
+        public NotificationResult Excluir(int CodMoeda)
         {
-            return _moedaServico.Excluir( CodJogador, CodFicha);
+            return _moedaServico.Excluir(CodMoeda);
+        }
+
+        [HttpPut("Atualizar")]
+        public NotificationResult Atualizar(Moeda entidade)
+        {
+            return _moedaServico.Atualizar(entidade);
         }
 
     }

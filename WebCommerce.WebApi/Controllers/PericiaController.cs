@@ -56,9 +56,15 @@ namespace WebCommerce.WebApi.Controllers
         }
 
         [HttpDelete("excluir")]
-        public NotificationResult Excluir(int CodJogador, int CodFiha)
+        public NotificationResult Excluir(int CodPericia)
         {
-            return _periciaServico.Excluir( CodJogador, CodFiha);
+            return _periciaServico.Excluir( CodPericia);
+        }
+
+        [HttpPut("Atualizar")]
+        public NotificationResult Atualizar(Pericia entidade)
+        {
+            return _periciaServico.Atualizar(entidade);
         }
 
     }

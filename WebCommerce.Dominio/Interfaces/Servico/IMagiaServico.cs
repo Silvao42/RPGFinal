@@ -17,5 +17,6 @@ namespace WebCommerce.Dominio.Interfaces
 
         NotificationResult Salvar(Magia entidade);
         NotificationResult Excluir(int CodMagia);
+        NotificationResult Atualizar(Magia entidade);
     }
 }

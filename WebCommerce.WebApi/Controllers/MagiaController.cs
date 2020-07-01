@@ -56,5 +56,11 @@ namespace WebCommerce.WebApi.Controllers
             return _magiaServico.Excluir(CodMagia);
         }
 
+        [HttpPut("Atualizar")]
+        public NotificationResult Atualizar(Magia entidade)
+        {
+            return _magiaServico.Atualizar(entidade);
+        }
+
     }
 }

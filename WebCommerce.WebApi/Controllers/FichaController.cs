@@ -62,5 +62,11 @@ namespace WebCommerce.WebApi.Controllers
             return _fichaServico.Excluir( CodFicha, CodJogador);
         }
 
+        [HttpPut("Atualizar")]
+        public NotificationResult Atualizar(Ficha entidade)
+        {
+            return _fichaServico.Atualizar(entidade);
+        }
+
     }
 }

@@ -17,5 +17,6 @@ namespace WebCommerce.Dominio.Interfaces
 
         NotificationResult Salvar(Armadura entidade);
         NotificationResult Excluir(int CodArmadura);
+        NotificationResult Atualizar(Armadura entidade);
     }
 }

@@ -17,5 +17,6 @@ namespace WebCommerce.Dominio.Interfaces
 
         NotificationResult Salvar(Classe entidade);
         NotificationResult Excluir(int CodClasse);
+        NotificationResult Atualizar(Classe entidade);
     }
 }

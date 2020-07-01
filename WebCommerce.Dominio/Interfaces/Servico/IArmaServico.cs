@@ -16,6 +16,7 @@ namespace WebCommerce.Dominio.Interfaces
         IEnumerable<Arma> ListarTodos();
 
         NotificationResult Salvar(Arma entidade);
-        NotificationResult Excluir(int CodArma);
+        NotificationResult Excluir(Arma CodArma);
+        NotificationResult Atualizar(Arma entidade);
     }
 }

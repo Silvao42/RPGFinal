@@ -13,7 +13,7 @@ namespace WebCommerce.Dominio.Interfaces
         FichaAtributo ListarUm(int CodFicha, int CodJogador, int CodAtributo);
 
         IEnumerable<FichaAtributo> ListarAtivos();
-        Task<List<FichaAtributo>> ListarTodos();
+        IEnumerable<FichaAtributo> ListarTodos();
 
         NotificationResult Salvar(FichaAtributo entidade);
         NotificationResult Excluir(FichaAtributo entidade);

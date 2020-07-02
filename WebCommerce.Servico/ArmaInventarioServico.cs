@@ -54,7 +54,7 @@ namespace WebCommerce.Servico
             throw new NotImplementedException();
         }
 
-        public Task<List<ArmaInventario>> ListarTodos()
+        public IEnumerable<ArmaInventario> ListarTodos()
         {
             throw new NotImplementedException();
         }

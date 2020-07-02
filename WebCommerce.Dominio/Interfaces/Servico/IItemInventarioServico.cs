@@ -13,7 +13,7 @@ namespace WebCommerce.Dominio.Interfaces
         ItemInventario ListarUm(int CodFicha, int CodJogador, int CodItem);
 
         IEnumerable<ItemInventario> ListarAtivos();
-        Task<List<ItemInventario>> ListarTodos();
+        IEnumerable<ItemInventario> ListarTodos();
 
         NotificationResult Salvar(ItemInventario entidade);
         NotificationResult Excluir(ItemInventario entidade);

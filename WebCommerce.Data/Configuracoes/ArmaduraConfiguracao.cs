@@ -12,7 +12,8 @@ namespace WebCommerce.Dados.Configuracoes
         {
             builder.ToTable("Armadura", "RPG");
             builder.HasKey(c =>  c.CodArmadura );
-            builder.Property(f => f.CodArmadura).HasColumnName("CodArmadura");
+            builder.Property(f => f.CodArmadura).HasColumnName("CodArmadura")
+                .IsRequired();
             builder.Property(f => f.NomeArmadura).HasColumnName("NomeArmadura")
                 .IsRequired()
                 .HasMaxLength(20);

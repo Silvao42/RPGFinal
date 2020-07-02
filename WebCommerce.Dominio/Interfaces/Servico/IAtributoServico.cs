@@ -13,7 +13,7 @@ namespace WebCommerce.Dominio.Interfaces
         Atributo ListarUm(int CodAtributo);
 
         IEnumerable<Atributo> ListarAtivos();
-        Task<List<Atributo>> ListarTodos();
+        IEnumerable<Atributo> ListarTodos();
 
         NotificationResult Salvar(Atributo entidade);
         NotificationResult Excluir(Atributo entidade);

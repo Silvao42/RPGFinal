@@ -26,9 +26,44 @@ namespace WebCommerce.WebApi
         {
             services.AddTransient<IArmaServico, ArmaServico>();
             services.AddTransient<IArmaRepositorio, ArmaRepositorio>();
-
+            services.AddTransient<IArmaduraServico, ArmaduraServico>();
+            services.AddTransient<IArmaduraRepositorio, ArmaduraRepositorio>();
+            services.AddTransient<IArmaduraInventarioServico, ArmaduraInventarioServico>();
+            services.AddTransient<IArmaduraInventarioRepositorio, ArmaduraInventarioRepositorio>();
             services.AddTransient<IArmaInventarioServico, ArmaInventarioServico>();
             services.AddTransient<IArmaInventarioRepositorio, ArmaInventarioRepositorio>();
+            services.AddTransient<IAtributoServico, AtributoServico>();
+            services.AddTransient<IAtributoRepositorio, AtributoRepositorio>();
+            services.AddTransient<IClasseServico, ClasseServico>();
+            services.AddTransient<IClasseRepositorio, ClasseRepositorio>();
+            services.AddTransient<IFichaServico, FichaServico>();
+            services.AddTransient<IFichaRepositorio, FichaRepositorio>();
+            services.AddTransient<IFichaAtributoServico, FichaAtributoServico>();
+            services.AddTransient<IFichaAtributoRepositorio, FichaAtributoRepositorio>();
+            services.AddTransient<IFichaIdiomaServico, FichaIdiomaServico>();
+            services.AddTransient<IFichaIdiomaRepositorio, FichaIdiomaRepositorio>();
+            services.AddTransient<IIdiomaServico, IdiomaServico>();
+            services.AddTransient<IIdiomaRepositorio, IdiomaRepositorio>();
+            services.AddTransient<IItemServico, ItemServico>();
+            services.AddTransient<IItemRepositorio, ItemRepositorio>();
+            services.AddTransient<IItemInventarioServico, ItemInventarioServico>();
+            services.AddTransient<IItemInventarioRepositorio, ItemInventarioRepositorio>();
+            services.AddTransient<IJogadorServico, JogadorServico>();
+            services.AddTransient<IJogadorRepositorio, JogadorRepositorio>();
+            services.AddTransient<IListaMagiaServico, ListaMagiaServico>();
+            services.AddTransient<IListaMagiaRepositorio, ListaMagiaRepositorio>();
+            services.AddTransient<IMagiaServico, MagiaServico>();
+            services.AddTransient<IMagiaRepositoro, MagiaRepositorio>();
+            services.AddTransient<IMoedaServico, MoedaServico>();
+            services.AddTransient<IMoedaRepositorio, MoedaRepositorio>();
+            services.AddTransient<IMoedaInventarioServico, MoedaInventarioServico>();
+            services.AddTransient<IMoedaInventarioRepositorio, MoedaInventarioRepositorio>();
+            services.AddTransient<IPericiaServico, PericiaServico>();
+            services.AddTransient<IPericiaRepositorio, PericiaRepositorio>();
+            services.AddTransient<IPericiaFichaServico, PericiaFichaServico>();
+            services.AddTransient<IPericiaFichaRepositorio, PericiaFichaRepositorio>();
+            services.AddTransient<IRacaServico, RacaServico>();
+            services.AddTransient<IRacaRepositorio, RacaRepositorio>();
 
             services.AddScoped(typeof(IRepositorioBase<>), typeof(RepositorioBase<>));
 

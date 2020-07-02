@@ -13,7 +13,7 @@ namespace WebCommerce.Dominio.Interfaces
         Magia ListarUm(int CodMagia);
 
         IEnumerable<Magia> ListarAtivos();
-        Task<List<Magia>> ListarTodos();
+        IEnumerable<Magia> ListarTodos();
 
         NotificationResult Salvar(Magia entidade);
         NotificationResult Excluir(Magia entidade);

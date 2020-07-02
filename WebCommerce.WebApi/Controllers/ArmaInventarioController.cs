@@ -37,7 +37,7 @@ namespace WebCommerce.WebApi.Controllers
         /// Retorna uma lista de produtos do tipo "Produto"
         /// </returns>
         [HttpGet("todos")]
-        public Task<List<ArmaInventario>> Todos() {
+        public IEnumerable<ArmaInventario> Todos() {
              return _armaInventarioServico.ListarTodos();
         }
 

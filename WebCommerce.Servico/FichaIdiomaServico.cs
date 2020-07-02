@@ -54,9 +54,9 @@ namespace WebCommerce.Servico
             throw new NotImplementedException();
         }
 
-        public Task<List<FichaIdioma>> ListarTodos()
+        public IEnumerable<FichaIdioma> ListarTodos()
         {
-            throw new NotImplementedException();
+            return _fichaIdiomaRepositorio.ListarTodos();
         }
 
         public FichaIdioma ListarUm(int CodIdioma, int CodJogador, int Codficha)

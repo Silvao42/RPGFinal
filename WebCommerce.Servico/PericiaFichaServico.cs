@@ -54,9 +54,9 @@ namespace WebCommerce.Servico
             throw new NotImplementedException();
         }
 
-        public Task<List<PericiaFicha>> ListarTodos()
+        public IEnumerable<PericiaFicha> ListarTodos()
         {
-            throw new NotImplementedException();
+            return _periciaFichaRepositorio.ListarTodos();
         }
 
         public PericiaFicha ListarUm(int CodJogador, int CodFicha, int CodPericia)

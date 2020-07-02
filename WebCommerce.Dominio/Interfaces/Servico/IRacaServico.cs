@@ -13,7 +13,7 @@ namespace WebCommerce.Dominio.Interfaces
         Raca ListarUm(int CodRaca);
 
         IEnumerable<Raca> ListarAtivos();
-        Task<List<Raca>> ListarTodos();
+        IEnumerable<Raca> ListarTodos();
 
         NotificationResult Salvar(Raca entidade);
         NotificationResult Excluir(Raca entidade);

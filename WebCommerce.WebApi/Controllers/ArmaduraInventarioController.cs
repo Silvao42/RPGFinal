@@ -31,7 +31,7 @@ namespace WebCommerce.WebApi.Controllers
         }
 
         [HttpGet("todos")]
-        public Task<List<ArmaduraInventario>> Todos() {
+        public IEnumerable<ArmaduraInventario> Todos() {
              return _armaduraInventarioServico.ListarTodos();
         }
 

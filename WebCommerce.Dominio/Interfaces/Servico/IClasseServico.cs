@@ -13,7 +13,7 @@ namespace WebCommerce.Dominio.Interfaces
         Classe ListarUm(int CodClasse);
 
         IEnumerable<Classe> ListarAtivos();
-        Task<List<Classe>> ListarTodos();
+        IEnumerable<Classe> ListarTodos();
 
         NotificationResult Salvar(Classe entidade);
         NotificationResult Excluir(Classe entidade);

@@ -54,9 +54,9 @@ namespace WebCommerce.Servico
             throw new NotImplementedException();
         }
 
-        public Task<List<Atributo>> ListarTodos()
+        public IEnumerable<Atributo> ListarTodos()
         {
-            throw new NotImplementedException();
+            return _atributoServico.ListarTodos();
         }
 
         public Atributo ListarUm(int CodAtributo)

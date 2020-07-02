@@ -54,9 +54,9 @@ namespace WebCommerce.Servico
             throw new NotImplementedException();
         }
 
-        public Task<List<Magia>> ListarTodos()
+        public IEnumerable<Magia> ListarTodos()
         {
-            throw new NotImplementedException();
+            return _magiaRepositoro.ListarTodos();
         }
 
         public Magia ListarUm(int CodMagia)

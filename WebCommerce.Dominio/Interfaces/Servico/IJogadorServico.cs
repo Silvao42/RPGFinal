@@ -13,7 +13,7 @@ namespace WebCommerce.Dominio.Interfaces
         Jogador ListarUm(int CodJogador);
 
         IEnumerable<Jogador> ListarAtivos();
-        Task<List<Jogador>> ListarTodos();
+        <Jogador> ListarTodos();
 
         NotificationResult Salvar(Jogador entidade);
         NotificationResult Excluir(Jogador entidade);

@@ -13,10 +13,10 @@ namespace WebCommerce.Dominio.Interfaces
         Armadura ListarUm(int CodArmadura);
 
         IEnumerable<Armadura> ListarAtivos();
-        Task<List<Armadura>> ListarTodos();
+        IEnumerable<Armadura> ListarTodos();
 
         NotificationResult Salvar(Armadura entidade);
-        NotificationResult Excluir(Armadura entidade);
+        NotificationResult Excluir(Armadura CodArmadura);
         NotificationResult Atualizar(Armadura entidade);
     }
 }

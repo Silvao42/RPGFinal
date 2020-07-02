@@ -53,9 +53,9 @@ namespace WebCommerce.Servico
             throw new NotImplementedException();
         }
 
-        public Task<List<Raca>> ListarTodos()
+        public IEnumerable<Raca> ListarTodos()
         {
-            throw new NotImplementedException();
+            return _racaRepositorio.ListarTodos();
         }
 
         public Raca ListarUm(int CodRaca)

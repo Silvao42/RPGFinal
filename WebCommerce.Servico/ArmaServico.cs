@@ -71,7 +71,7 @@ namespace WebCommerce.Servico
             try
             {
 
-                if (entidade.CodArma == 0)
+                if (entidade.CodArma != 0)
                 {
                     entidade.CodArma = entidade.CodArma;
 

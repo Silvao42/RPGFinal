@@ -30,7 +30,6 @@ namespace WebCommerce.Dados
         public DbSet<Pericia> Pericia { get; set; }
         public DbSet<PericiaFicha> PericiaFicha { get; set; }
         public DbSet<Raca> Raca { get; set; }
-        //public DbSet<Departamento> Departamento { get; set; }
         //1. FIM
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

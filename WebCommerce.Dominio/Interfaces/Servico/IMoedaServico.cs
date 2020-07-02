@@ -13,7 +13,7 @@ namespace WebCommerce.Dominio.Interfaces
         Moeda ListarUm(int CodMoeda);
 
         IEnumerable<Moeda> ListarAtivos();
-        Task<List<Moeda>> ListarTodos();
+        IEnumerable<Moeda> ListarTodos();
 
         NotificationResult Salvar(Moeda entidade);
         NotificationResult Excluir(Moeda entidade);

@@ -54,9 +54,9 @@ namespace WebCommerce.Servico
             throw new NotImplementedException();
         }
 
-        public Task<List<Moeda>> ListarTodos()
+        public IEnumerable<Moeda> ListarTodos()
         {
-            throw new NotImplementedException();
+            return _moedaRepositorio.ListarTodos();
         }
 
         public Moeda ListarUm(int CodMoeda)

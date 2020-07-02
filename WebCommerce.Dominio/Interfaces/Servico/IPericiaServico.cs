@@ -13,7 +13,7 @@ namespace WebCommerce.Dominio.Interfaces
         Pericia ListarUm(int CodPericia);
 
         IEnumerable<Pericia> ListarAtivos();
-        Task<List<Pericia>> ListarTodos();
+        IEnumerable<Pericia> ListarTodos();
 
         NotificationResult Salvar(Pericia entidade);
         NotificationResult Excluir(Pericia entidade);

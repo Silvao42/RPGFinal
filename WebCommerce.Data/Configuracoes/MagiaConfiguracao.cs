@@ -11,7 +11,7 @@ namespace WebCommerce.Dados.Configuracoes
         public void Configure(EntityTypeBuilder<Magia> builder)
         {
             builder.ToTable("Magia", "RPG");
-            builder.HasKey(c => new { c.CodMagia });
+            builder.HasKey(c =>  c.CodMagia );
             //builder.HasKey("CodMagia");
             builder.Property(f => f.CodMagia).HasColumnName("CodMagia");
             builder.Property(f => f.NomeMagia).HasColumnName("NomeMagia")

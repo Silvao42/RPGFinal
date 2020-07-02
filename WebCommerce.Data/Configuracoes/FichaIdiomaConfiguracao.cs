@@ -10,7 +10,7 @@ namespace WebCommerce.Dados.Configuracoes
     {
         public void Configure(EntityTypeBuilder<FichaIdioma> builder)
         {
-            builder.ToTable("FichaIdioma", "RPG");
+            builder.ToTable("Ficha_Idioma", "RPG");
             builder.HasKey(c => new { c.CodIdioma, c.CodFicha, c.CodJogador });
             //builder.HasKey("CodIdioma", "CodFicha", "CodJogador");
             builder.Property(f => f.CodIdioma).HasColumnName("CodIdioma");

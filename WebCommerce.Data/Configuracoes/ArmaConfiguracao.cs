@@ -11,7 +11,7 @@ namespace WebCommerce.Dados.Configuracoes
         public void Configure(EntityTypeBuilder<Arma> builder)
         {
             builder.ToTable("Arma", "RPG");
-            builder.HasKey(c => new {c.CodArma});
+            builder.HasKey(c => c.CodArma);
             builder.Property(f => f.CodArma).HasColumnName("CodArma")
                 .IsRequired();
 

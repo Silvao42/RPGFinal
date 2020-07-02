@@ -66,8 +66,34 @@ namespace WebCommerce.Servico
 
         public NotificationResult Salvar(Classe entidade)
         {
-            throw new NotImplementedException();
+            var NotificationResult = new NotificationResult();
+
+            try
+            {
+
+                if (entidade.CodClasse != 0)
+                {
+                    entidade.CodClasse = entidade.CodClasse;
+
+                    if (NotificationResult.IsValid)
+                    {
+                        _classeRepositorio.Adicionar(entidade);
+                        NotificationResult.Add("Cadastrado!");
+                    }
+
+                    return NotificationResult;
+                }
+
+                else
+                    return NotificationResult.Add(new NotificationError("Erro no cadastro!", NotificationErrorType.USER)); ;
+            }
+
+            catch (Exception ex)
+            {
+                return NotificationResult.Add(new NotificationError(ex.Message));
+            }
         }
+
         public NotificationResult Atualizar(Classe entidade)
         {
             var NotificationResult = new NotificationResult();

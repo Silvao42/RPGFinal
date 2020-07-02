@@ -66,8 +66,34 @@ namespace WebCommerce.Servico
 
         public NotificationResult Salvar(Moeda entidade)
         {
-            throw new NotImplementedException();
+            var NotificationResult = new NotificationResult();
+
+            try
+            {
+
+                if (entidade.CodMoeda != 0)
+                {
+                    entidade.CodMoeda = entidade.CodMoeda;
+
+                    if (NotificationResult.IsValid)
+                    {
+                        _moedaRepositorio.Adicionar(entidade);
+                        NotificationResult.Add("Cadastrado!");
+                    }
+
+                    return NotificationResult;
+                }
+
+                else
+                    return NotificationResult.Add(new NotificationError("Erro no cadastro!", NotificationErrorType.USER)); ;
+            }
+
+            catch (Exception ex)
+            {
+                return NotificationResult.Add(new NotificationError(ex.Message));
+            }
         }
+
         public NotificationResult Atualizar(Moeda entidade)
         {
             var NotificationResult = new NotificationResult();

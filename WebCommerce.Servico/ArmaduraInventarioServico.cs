@@ -66,7 +66,34 @@ namespace WebCommerce.Servico
 
         public NotificationResult Salvar(ArmaduraInventario entidade)
         {
-            throw new NotImplementedException();
+            var NotificationResult = new NotificationResult();
+
+            try
+            {
+
+                if (entidade.CodJogador != 0 && entidade.CodFicha != 0 && entidade.CodArmadura != 0)
+                {
+                    entidade.CodJogador = entidade.CodJogador;
+                    entidade.CodFicha = entidade.CodFicha;
+                    entidade.CodArmadura = entidade.CodArmadura;
+
+                    if (NotificationResult.IsValid)
+                    {
+                        _armaduraRepositorio.Adicionar(entidade);
+                        NotificationResult.Add("Cadastrado!");
+                    }
+
+                    return NotificationResult;
+                }
+
+                else
+                    return NotificationResult.Add(new NotificationError("Erro no cadastro!", NotificationErrorType.USER)); ;
+            }
+
+            catch (Exception ex)
+            {
+                return NotificationResult.Add(new NotificationError(ex.Message));
+            }
         }
         public NotificationResult Atualizar(ArmaduraInventario entidade)
         {

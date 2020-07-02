@@ -66,8 +66,34 @@ namespace WebCommerce.Servico
 
         public NotificationResult Salvar(Jogador entidade)
         {
-            throw new NotImplementedException();
+            var NotificationResult = new NotificationResult();
+
+            try
+            {
+
+                if (entidade.CodJogador != 0)
+                {
+                    entidade.CodJogador = entidade.CodJogador;
+
+                    if (NotificationResult.IsValid)
+                    {
+                        _jogadorRepositorio.Adicionar(entidade);
+                        NotificationResult.Add("Cadastrado!");
+                    }
+
+                    return NotificationResult;
+                }
+
+                else
+                    return NotificationResult.Add(new NotificationError("Erro no cadastro!", NotificationErrorType.USER)); ;
+            }
+
+            catch (Exception ex)
+            {
+                return NotificationResult.Add(new NotificationError(ex.Message));
+            }
         }
+
         public NotificationResult Atualizar(Jogador entidade)
         {
             var NotificationResult = new NotificationResult();

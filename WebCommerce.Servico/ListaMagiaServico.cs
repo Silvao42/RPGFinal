@@ -66,8 +66,36 @@ namespace WebCommerce.Servico
 
         public NotificationResult Salvar(ListaMagia entidade)
         {
-            throw new NotImplementedException();
+            var NotificationResult = new NotificationResult();
+
+            try
+            {
+
+                if (entidade.CodFicha != 0 && entidade.CodJogador != 0 && entidade.CodMagia != 0)
+                {
+                    entidade.CodFicha = entidade.CodFicha;
+                    entidade.CodJogador = entidade.CodJogador;
+                    entidade.CodMagia = entidade.CodMagia;
+
+                    if (NotificationResult.IsValid)
+                    {
+                        _listaMagiaRepositorio.Adicionar(entidade);
+                        NotificationResult.Add("Cadastrado!");
+                    }
+
+                    return NotificationResult;
+                }
+
+                else
+                    return NotificationResult.Add(new NotificationError("Erro no cadastro!", NotificationErrorType.USER)); ;
+            }
+
+            catch (Exception ex)
+            {
+                return NotificationResult.Add(new NotificationError(ex.Message));
+            }
         }
+
         public NotificationResult Atualizar(ListaMagia entidade)
         {
             var NotificationResult = new NotificationResult();

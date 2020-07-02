@@ -66,8 +66,36 @@ namespace WebCommerce.Servico
 
         public NotificationResult Salvar(FichaIdioma entidade)
         {
-            throw new NotImplementedException();
+            var NotificationResult = new NotificationResult();
+
+            try
+            {
+
+                if (entidade.CodFicha != 0 && entidade.CodJogador != 0 && entidade.CodIdioma != 0)
+                {
+                    entidade.CodFicha = entidade.CodFicha;
+                    entidade.CodJogador = entidade.CodJogador;
+                    entidade.CodIdioma = entidade.CodIdioma;
+
+                    if (NotificationResult.IsValid)
+                    {
+                        _fichaIdiomaRepositorio.Adicionar(entidade);
+                        NotificationResult.Add("Cadastrado!");
+                    }
+
+                    return NotificationResult;
+                }
+
+                else
+                    return NotificationResult.Add(new NotificationError("Erro no cadastro!", NotificationErrorType.USER)); ;
+            }
+
+            catch (Exception ex)
+            {
+                return NotificationResult.Add(new NotificationError(ex.Message));
+            }
         }
+
         public NotificationResult Atualizar(FichaIdioma entidade)
         {
             var NotificationResult = new NotificationResult();

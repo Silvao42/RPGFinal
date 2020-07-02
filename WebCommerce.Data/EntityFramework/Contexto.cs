@@ -46,20 +46,24 @@ namespace WebCommerce.Dados
       
 
             modelBuilder.ApplyConfiguration(new ArmaConfiguracao());
+            modelBuilder.ApplyConfiguration(new ArmaInventarioConfiguracao());
             modelBuilder.ApplyConfiguration(new ArmaduraConfiguracao());
             modelBuilder.ApplyConfiguration(new ArmaduraInventarioConfiguracao());
             modelBuilder.ApplyConfiguration(new AtributoConfiguracao());
             modelBuilder.ApplyConfiguration(new ClasseConfiguracao());
-            modelBuilder.ApplyConfiguration(new ClasseConfiguracao());
+            modelBuilder.ApplyConfiguration(new FichaAtributoConfiguracao());
             modelBuilder.ApplyConfiguration(new FichaConfiguracao());
             modelBuilder.ApplyConfiguration(new FichaIdiomaConfiguracao());
+            modelBuilder.ApplyConfiguration(new IdiomaConfiguracao());
             modelBuilder.ApplyConfiguration(new ItemConfiguracao());
             modelBuilder.ApplyConfiguration(new ItemInventarioConfiguracao());
             modelBuilder.ApplyConfiguration(new JogadorConfiguracao());
             modelBuilder.ApplyConfiguration(new ListaMagiaConfiguracao());
             modelBuilder.ApplyConfiguration(new MagiaConfiguracao());
+            modelBuilder.ApplyConfiguration(new MoedaInventarioConfiguracao());
             modelBuilder.ApplyConfiguration(new MoedaConfiguracao());
             modelBuilder.ApplyConfiguration(new PericiaConfiguracao());
+            modelBuilder.ApplyConfiguration(new PericiaFichaConfiguracao());
             modelBuilder.ApplyConfiguration(new RacaConfiguracao());
             //2. FIM
         }

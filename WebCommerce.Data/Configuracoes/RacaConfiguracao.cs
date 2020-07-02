@@ -11,7 +11,7 @@ namespace WebCommerce.Dados.Configuracoes
         {
             builder.ToTable("Raca", "RPG");
             
-            builder.HasKey(c => new { c.CodRaca });
+            builder.HasKey(c => c.CodRaca );
             
             builder.HasKey("CodRaca");
             builder.Property(f => f.CodRaca).HasColumnName("CodRaca");

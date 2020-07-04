@@ -13,7 +13,7 @@ namespace WebCommerce.Dominio.Interfaces
         Idioma ListarUm(int CodIdioma);
 
         IEnumerable<Idioma> ListarAtivos();
-        <Idioma> ListarTodos();
+        IEnumerable<Idioma> ListarTodos();
 
         NotificationResult Salvar(Idioma entidade);
         NotificationResult Excluir(Idioma entidade);

@@ -36,10 +36,13 @@ namespace WebCommerce.WebApi.Controllers
         }
 
 
-        [HttpGet("ativos")]
-        public IEnumerable<ArmaduraInventario> Ativos() => _armaduraInventarioServico.ListarAtivos();
+        [HttpGet("LitarUm")]
+        public IEnumerable<ArmaduraInventario> Listar(int CodJogador, int CodFicha, int CodArmadura)
+        {
+            yield return _armaduraInventarioServico.ListarUm(CodJogador,CodFicha,CodArmadura);
+        }
 
-       
+
         [HttpPost("salvar")]
         public NotificationResult Salvar(ArmaduraInventario entidade)
         {

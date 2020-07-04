@@ -37,16 +37,20 @@ namespace WebCommerce.WebApi.Controllers
         /// Retorna uma lista de produtos do tipo "Produto"
         /// </returns>
         [HttpGet("todos")]
-        public Task<List<ItemInventario>> Todos() {
-             return _itemInventarioServico.ListarTodos();
+        public IEnumerable<ItemInventario> Todos()
+        {
+            return _itemInventarioServico.ListarTodos();
         }
 
         /// <summary>
         /// Lista de Todos os Produtos Ativos
         /// </summary>
         /// <returns></returns>
-        [HttpGet("ativos")]
-        public IEnumerable<ItemInventario> Ativos() => _itemInventarioServico.ListarAtivos();
+        [HttpGet("LitarUm")]
+        public IEnumerable<ItemInventario> Listar(int CodJogador, int CodFicha, int CodItem)
+        {
+            yield return _itemInventarioServico.ListarUm(CodJogador,CodFicha,CodItem);
+        }
 
         [HttpPost("salvar")]
         public NotificationResult Salvar(ItemInventario entidade)

@@ -37,16 +37,20 @@ namespace WebCommerce.WebApi.Controllers
         /// Retorna uma lista de produtos do tipo "Produto"
         /// </returns>
         [HttpGet("todos")]
-        public Task<List<Moeda>> Todos() {
-             return _moedaServico.ListarTodos();
+        public IEnumerable<Moeda> Todos()
+        {
+            return _moedaServico.ListarTodos();
         }
 
         /// <summary>
         /// Lista de Todos os Produtos Ativos
         /// </summary>
         /// <returns></returns>
-        [HttpGet("ativos")]
-        public IEnumerable<Moeda> Ativos() => _moedaServico.ListarAtivos();
+        [HttpGet("LitarUm")]
+        public IEnumerable<Moeda> Listar(int CodMoeda)
+        {
+            yield return _moedaServico.ListarUm(CodMoeda);
+        }
 
         [HttpPost("salvar")]
         public NotificationResult Salvar(Moeda entidade)

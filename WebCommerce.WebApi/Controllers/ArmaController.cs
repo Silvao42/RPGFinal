@@ -36,8 +36,11 @@ namespace WebCommerce.WebApi.Controllers
         }
 
 
-        [HttpGet("ativos")]
-        public IEnumerable<Arma> Ativos() => _armaServico.ListarAtivos();
+        [HttpGet("LitarUm")]
+        public IEnumerable<Arma> Listar(int CodArma)
+        {
+            yield return _armaServico.ListarUm(CodArma);
+        }
 
         [HttpPost("salvar")]
         public NotificationResult Salvar(Arma entidade)

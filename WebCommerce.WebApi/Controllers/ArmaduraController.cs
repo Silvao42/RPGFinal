@@ -33,10 +33,13 @@ namespace WebCommerce.WebApi.Controllers
              return _armaduraServico.ListarTodos();
         }
 
-        [HttpGet("ativos")]
-        public IEnumerable<Armadura> Ativos() => _armaduraServico.ListarAtivos();
+        [HttpGet("LitarUm")]
+        public IEnumerable<Armadura> Listar(int CodArmadura)
+        {
+            yield return _armaduraServico.ListarUm(CodArmadura);
+        }
 
-       
+
         [HttpPost("salvar")]
         public NotificationResult Salvar(Armadura entidade)
         {

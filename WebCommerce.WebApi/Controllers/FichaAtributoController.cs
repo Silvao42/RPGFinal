@@ -36,16 +36,20 @@ namespace WebCommerce.WebApi.Controllers
         /// Retorna uma lista de produtos do tipo "Produto"
         /// </returns>
         [HttpGet("todos")]
-        public Task<List<FichaAtributo>> Todos() {
-             return _fichaAtributoServico.ListarTodos();
+        public IEnumerable<FichaAtributo> Todos()
+        {
+            return _fichaAtributoServico.ListarTodos();
         }
 
         /// <summary>
         /// Lista de Todos os Produtos Ativos
         /// </summary>
         /// <returns></returns>
-        [HttpGet("ativos")]
-        public IEnumerable<FichaAtributo> Ativos() => _fichaAtributoServico.ListarAtivos();
+        [HttpGet("LitarUm")]
+        public IEnumerable<FichaAtributo> Listar(int CodJogador, int CodFicha, int CodAtributo)
+        {
+            yield return _fichaAtributoServico.ListarUm(CodJogador,CodFicha,CodAtributo);
+        }
 
         /// <summary>
         /// Exemplo de equals e getHashCode
